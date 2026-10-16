@@ -1,0 +1,548 @@
+
+/* ==========================================
+   SOPORTE TI - REGISTRO DE INCIDENCIAS
+========================================== */
+
+.pagina-registro {
+    margin: 0;
+    min-height: 100vh;
+    background: #f5f7fa;
+    color: #172f49;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.pagina-registro *,
+.pagina-registro *::before,
+.pagina-registro *::after {
+    box-sizing: border-box;
+}
+
+/* NAVEGACIÓN */
+
+.pagina-registro .inicio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 78px;
+    padding: 0 max(5%, calc((100% - 1320px) / 2));
+    background: #fff;
+    border-bottom: 1px solid #e4eaf0;
+    box-shadow: none;
+}
+
+.pagina-registro .inicio-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #172f49;
+    text-decoration: none;
+}
+
+.pagina-registro .inicio-logo i {
+    color: #315d85;
+}
+
+.pagina-registro .inicio-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.pagina-registro .inicio-nav a {
+    color: #52657a;
+    font-size: 13px;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+.pagina-registro .inicio-nav a:hover,
+.pagina-registro .inicio-nav a.nav-activo {
+    color: #172f49;
+}
+
+.pagina-registro .inicio-nav .inicio-acceso {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 17px;
+    background: #fff;
+    border: 1px solid #dce4ed;
+    border-radius: 7px;
+    color: #172f49;
+    font-weight: 650;
+}
+
+/* CONTENEDOR */
+
+.pagina-registro .registro-contenedor {
+    width: min(100% - 40px, 940px);
+    margin: 0 auto;
+    padding: 55px 0 85px;
+}
+
+.pagina-registro .registro-encabezado {
+    max-width: 720px;
+    margin: 0 0 32px;
+    text-align: left;
+}
+
+.pagina-registro .registro-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #416d94;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.4px;
+}
+
+.pagina-registro .registro-encabezado h1 {
+    margin: 0 0 12px;
+    color: #172f49;
+    font-size: clamp(28px, 3vw, 37px);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.pagina-registro .registro-encabezado p {
+    max-width: 630px;
+    margin: 0;
+    color: #718095;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TARJETA PRINCIPAL */
+
+.pagina-registro .registro-tarjeta {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #e2e8ef;
+    border-radius: 11px;
+    box-shadow: 0 5px 22px rgba(23, 47, 73, .035);
+    overflow: hidden;
+}
+
+.pagina-registro .registro-tarjeta-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e8edf2;
+    background: #fff;
+}
+
+.pagina-registro .registro-tarjeta-icono {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    display: grid;
+    place-items: center;
+    background: #eaf1f8;
+    color: #315f8a;
+    border-radius: 8px;
+    font-size: 17px;
+    box-shadow: none;
+}
+
+.pagina-registro .registro-tarjeta-header h2 {
+    margin: 0 0 5px;
+    color: #1c324a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.pagina-registro .registro-tarjeta-header p {
+    margin: 0;
+    color: #8391a1;
+    font-size: 12px;
+}
+
+/* FORMULARIO */
+
+.pagina-registro .registro-formulario {
+    padding: 30px;
+}
+
+.pagina-registro .registro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px 25px;
+    margin-bottom: 25px;
+}
+
+.pagina-registro .registro-campo {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.pagina-registro .registro-campo label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #34465b;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.pagina-registro .registro-campo label i {
+    width: 16px;
+    color: #7890a7;
+    font-size: 13px;
+}
+
+.pagina-registro .registro-campo input,
+.pagina-registro .registro-campo select,
+.pagina-registro .registro-campo textarea {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid #d8e1e9;
+    border-radius: 7px;
+    outline: none;
+    color: #1b2c40;
+    font-family: inherit;
+    font-size: 13px;
+    box-shadow: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.pagina-registro .registro-campo input,
+.pagina-registro .registro-campo select {
+    height: 49px;
+}
+
+.pagina-registro .registro-campo textarea {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.pagina-registro .registro-campo input::placeholder,
+.pagina-registro .registro-campo textarea::placeholder {
+    color: #9aa7b5;
+}
+
+.pagina-registro .registro-campo input:focus,
+.pagina-registro .registro-campo select:focus,
+.pagina-registro .registro-campo textarea:focus {
+    border-color: #557d9f;
+    box-shadow: 0 0 0 3px rgba(65, 109, 148, .09);
+}
+
+.pagina-registro .registro-descripcion {
+    margin-bottom: 28px;
+}
+
+.pagina-registro .registro-descripcion small {
+    color: #8391a1;
+    font-size: 11px;
+}
+
+/* GUÍA DE PRIORIDADES */
+
+.pagina-registro .registro-prioridades {
+    margin: 0 0 30px;
+    padding: 21px 23px;
+    background: #f7f9fb;
+    border: 1px solid #e5ebf1;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.pagina-registro .registro-prioridades h3 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 20px;
+    color: #263e56;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pagina-registro .registro-prioridades h3 i {
+    color: #557d9f;
+}
+
+.pagina-registro .prioridades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pagina-registro .prioridad-ayuda {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.pagina-registro .prioridad-punto {
+    width: 9px;
+    height: 9px;
+    min-width: 9px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.pagina-registro .prioridad-punto.baja {
+    background: #2d9b67;
+}
+
+.pagina-registro .prioridad-punto.media {
+    background: #df9b2f;
+}
+
+.pagina-registro .prioridad-punto.alta {
+    background: #df5151;
+}
+
+.pagina-registro .prioridad-ayuda strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #34465b;
+    font-size: 12px;
+}
+
+.pagina-registro .prioridad-ayuda p {
+    margin: 0;
+    color: #718095;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* ACCIONES */
+
+.pagina-registro .registro-acciones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #e8edf2;
+}
+
+.pagina-registro .registro-btn-principal,
+.pagina-registro .registro-btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 0 19px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background .2s, border-color .2s;
+}
+
+.pagina-registro .registro-btn-principal {
+    background: #172f49;
+    border: 1px solid #172f49;
+    color: #fff;
+}
+
+.pagina-registro .registro-btn-principal:hover {
+    background: #294e70;
+    color: #fff;
+    transform: none;
+    box-shadow: none;
+}
+
+.pagina-registro .registro-btn-secundario {
+    background: #fff;
+    border: 1px solid #d8e1e9;
+    color: #536a82;
+}
+
+.pagina-registro .registro-btn-secundario:hover {
+    background: #f1f5f9;
+    color: #172f49;
+    transform: none;
+}
+
+/* MENSAJE DE ERROR */
+
+.pagina-registro .registro-mensaje-error {
+    margin: 23px 30px 0;
+    padding: 13px 16px;
+    background: #fff1f1;
+    border: 1px solid #f1cccc;
+    border-radius: 7px;
+    color: #a32b2b;
+    font-size: 13px;
+}
+
+/* CONFIRMACIÓN DE TICKET */
+
+.pagina-registro .registro-exito {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 48px 35px;
+    background: #fff;
+    border: 1px solid #e2e8ef;
+    border-radius: 11px;
+    text-align: center;
+    box-shadow: 0 5px 22px rgba(23, 47, 73, .035);
+}
+
+.pagina-registro .registro-exito-icono {
+    margin: 0 auto 20px;
+    color: #258452;
+    font-size: 40px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.pagina-registro .registro-exito h2 {
+    color: #172f49;
+    font-size: 24px;
+    margin: 0 0 12px;
+}
+
+.pagina-registro .registro-exito > p {
+    color: #718095;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pagina-registro .registro-numero {
+    margin: 27px auto;
+    padding: 23px;
+    max-width: 290px;
+    background: #f4f7fa;
+    border: 1px solid #e2e8ef;
+    border-radius: 8px;
+}
+
+.pagina-registro .registro-numero span {
+    display: block;
+    color: #718095;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.pagina-registro .registro-numero strong {
+    display: block;
+    margin-top: 9px;
+    color: #172f49;
+    font-size: 36px;
+    font-weight: 750;
+}
+
+.pagina-registro .registro-exito-acciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* PIE DE PÁGINA */
+
+.pagina-registro .inicio-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 28px 5%;
+    background: #fff;
+    border-top: 1px solid #e5eaf0;
+}
+
+.pagina-registro .inicio-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #172f49;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.pagina-registro .inicio-footer-logo i {
+    color: #416d94;
+}
+
+.pagina-registro .inicio-footer p {
+    color: #8794a4;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 800px) {
+    .pagina-registro .registro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-registro .prioridades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-registro .registro-contenedor {
+        width: min(100% - 30px, 940px);
+        padding-top: 35px;
+    }
+
+    .pagina-registro .registro-formulario {
+        padding: 22px;
+    }
+
+    .pagina-registro .registro-tarjeta-header {
+        padding: 22px;
+    }
+
+    .pagina-registro .registro-mensaje-error {
+        margin: 20px 22px 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .pagina-registro .inicio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .pagina-registro .inicio-nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .pagina-registro .registro-acciones {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .pagina-registro .registro-acciones > * {
+        width: 100%;
+    }
+}

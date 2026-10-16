@@ -1,0 +1,371 @@
+
+/* ==========================================
+   SOPORTE TI - REGISTRO CON MENÚ LATERAL
+========================================== */
+
+.pagina-registro-panel {
+    margin: 0;
+    background: #f2f5fa;
+    color: #172f49;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.pagina-registro-panel *,
+.pagina-registro-panel *::before,
+.pagina-registro-panel *::after {
+    box-sizing: border-box;
+}
+
+/* ESTRUCTURA GENERAL */
+
+.pagina-registro-panel .registro-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* MENÚ LATERAL */
+
+.pagina-registro-panel .registro-sidebar {
+    position: sticky;
+    top: 0;
+    width: 238px;
+    min-width: 238px;
+    height: 100vh;
+    padding: 25px 12px 20px;
+    background: #172f49;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.pagina-registro-panel .registro-sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    margin-bottom: 52px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.pagina-registro-panel .registro-sidebar-logo i {
+    color: #62a6ff;
+    font-size: 25px;
+}
+
+.pagina-registro-panel .registro-sidebar-grupo {
+    margin-bottom: 30px;
+}
+
+.pagina-registro-panel .registro-sidebar-titulo {
+    margin: 0 10px 16px;
+    color: #91b4d9;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.pagina-registro-panel .registro-sidebar-enlace {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 45px;
+    margin-bottom: 6px;
+    padding: 0 15px;
+    border-radius: 8px;
+    color: #dbe7f5;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+}
+
+.pagina-registro-panel .registro-sidebar-enlace i {
+    width: 17px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.pagina-registro-panel .registro-sidebar-enlace:hover {
+    background: #294b6c;
+    color: white;
+}
+
+.pagina-registro-panel .registro-sidebar-enlace.activo {
+    background: #2861e8;
+    color: white;
+    font-weight: 650;
+}
+
+.pagina-registro-panel .registro-sidebar-pie {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 19px 9px 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+    color: #b6cde5;
+    font-size: 11px;
+}
+
+/* CONTENIDO DERECHO */
+
+.pagina-registro-panel .registro-main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100vh;
+}
+
+.pagina-registro-panel .registro-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 34px 0;
+}
+
+.pagina-registro-panel .registro-topbar-etiqueta {
+    display: block;
+    margin-bottom: 12px;
+    color: #2861e8;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.3px;
+}
+
+.pagina-registro-panel .registro-topbar h1 {
+    margin: 0 0 10px;
+    color: #172f49;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -.7px;
+}
+
+.pagina-registro-panel .registro-topbar p {
+    margin: 0;
+    color: #7386a0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pagina-registro-panel .registro-volver-listado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 45px;
+    padding: 0 19px;
+    background: #2861e8;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    box-shadow: 0 5px 12px rgba(40,97,232,.12);
+}
+
+.pagina-registro-panel .registro-volver-listado:hover {
+    background: #1d50c9;
+    color: #fff;
+}
+
+/* FORMULARIO CENTRAL */
+
+.pagina-registro-panel .registro-contenedor {
+    width: min(100% - 68px, 1050px);
+    max-width: 1050px;
+    margin: 30px auto 55px;
+    padding: 0;
+    flex: 1;
+}
+
+.pagina-registro-panel .registro-tarjeta {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #e1e8f1;
+    border-radius: 13px;
+    box-shadow: none;
+}
+
+.pagina-registro-panel .registro-tarjeta-header {
+    padding: 24px 30px;
+    background: #fff;
+}
+
+.pagina-registro-panel .registro-formulario {
+    padding: 30px;
+}
+
+.pagina-registro-panel .registro-grid {
+    gap: 23px 25px;
+    margin-bottom: 28px;
+}
+
+.pagina-registro-panel .registro-campo input,
+.pagina-registro-panel .registro-campo select {
+    height: 49px;
+}
+
+.pagina-registro-panel .registro-campo textarea {
+    min-height: 140px;
+}
+
+.pagina-registro-panel .registro-prioridades {
+    background: #f7f9fc;
+    border: 1px solid #e4ebf3;
+}
+
+.pagina-registro-panel .registro-btn-principal {
+    background: #2861e8;
+    border-color: #2861e8;
+}
+
+.pagina-registro-panel .registro-btn-principal:hover {
+    background: #1d50c9;
+    border-color: #1d50c9;
+}
+
+.pagina-registro-panel .registro-exito {
+    max-width: 750px;
+}
+
+/* PIE DE PÁGINA */
+
+.pagina-registro-panel .registro-footer {
+    padding: 20px;
+    color: #91a1b7;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* TABLETAS */
+
+@media (max-width: 1000px) {
+
+    .pagina-registro-panel .registro-sidebar {
+        width: 210px;
+        min-width: 210px;
+    }
+
+    .pagina-registro-panel .registro-topbar {
+        padding: 28px 25px 0;
+    }
+
+    .pagina-registro-panel .registro-contenedor {
+        width: calc(100% - 50px);
+    }
+
+}
+
+/* TELÉFONOS */
+
+@media (max-width: 700px) {
+
+    .pagina-registro-panel .registro-layout {
+        flex-direction: column;
+    }
+
+    .pagina-registro-panel .registro-sidebar {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 18px;
+    }
+
+    .pagina-registro-panel .registro-sidebar-logo {
+        margin-bottom: 22px;
+    }
+
+    .pagina-registro-panel .registro-sidebar-grupo {
+        margin-bottom: 15px;
+    }
+
+    .pagina-registro-panel .registro-sidebar-pie {
+        display: none;
+    }
+
+    .pagina-registro-panel .registro-topbar {
+        padding: 28px 20px 0;
+    }
+
+    .pagina-registro-panel .registro-topbar h1 {
+        font-size: 25px;
+    }
+
+    .pagina-registro-panel .registro-contenedor {
+        width: calc(100% - 30px);
+        margin-top: 25px;
+    }
+
+    .pagina-registro-panel .registro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-registro-panel .registro-formulario {
+        padding: 20px;
+    }
+
+    .pagina-registro-panel .registro-tarjeta-header {
+        padding: 20px;
+    }
+
+    .pagina-registro-panel .registro-acciones {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .pagina-registro-panel .registro-acciones > * {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================
+   AJUSTES DE UNIFICACIÓN VISUAL
+========================================== */
+
+@media (min-width: 1101px) {
+
+    .pagina-registro-panel .registro-contenedor {
+        width: calc(100% - 68px);
+        max-width: 1200px;
+        margin-top: 30px;
+    }
+
+    .pagina-registro-panel .registro-tarjeta {
+        width: 100%;
+    }
+
+    .pagina-registro-panel .registro-formulario {
+        padding: 34px 36px;
+    }
+
+    .pagina-registro-panel .registro-tarjeta-header {
+        padding: 25px 36px;
+    }
+
+}
+
+.pagina-registro-panel .registro-topbar h1 {
+    font-size: 29px;
+    line-height: 1.25;
+}
+
+.pagina-registro-panel .registro-campo input:focus,
+.pagina-registro-panel .registro-campo select:focus,
+.pagina-registro-panel .registro-campo textarea:focus {
+    border-color: #2861e8;
+    box-shadow: 0 0 0 3px rgba(40, 97, 232, 0.08);
+    outline: none;
+}
